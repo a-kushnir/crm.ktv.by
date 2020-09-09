@@ -1,0 +1,157 @@
+@page { margin: 20px 5px; }
+
+.hidden-html { display: inherit !important; }
+.visible-html { display: none !important; }
+
+.hidden-print { display: none !important; }
+.visible-print { display: inherit !important; }
+
+@media print {
+  .hidden-printer { display: none !important; }
+  .visible-printer { display: inherit !important; }
+}
+
+/* Useful classes */
+
+.align-left { text-align:left !important; }
+.align-center { text-align:center !important; }
+.align-right { text-align:right !important; }
+.align-justify { text-align:justify !important; }
+.align-top { vertical-align:top !important; }
+.align-middle { vertical-align:middle !important; }
+.align-bottom { vertical-align:bottom !important; }
+.nobr {white-space: nowrap;}
+.min-width {width:1px;}
+.max-width {width:100%;}
+
+.page-break-before { page-break-before: always; }
+.page-break-after { page-break-after: always; }
+.avoid-page-break { page-break-inside: avoid; }
+.columns-2 { -webkit-column-count:2; -moz-column-count:2; column-count:2; }
+.columns-3 { -webkit-column-count:3; -moz-column-count:3; column-count:3; }
+
+.priority-1 { font-weight: bold; }
+.priority-3 { font-weight: bold; }
+.priority-5 { color: white; }
+.priority-9 { color: gray; }
+
+img.phone-icon {
+  margin-bottom:-3px;
+}
+
+/* Bootstrap */
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:12px;
+  line-height: 14px;
+}
+
+h3 { font-size: 14px; font-weight: bold; }
+h3 small { font-size: 14px; font-weight: normal; }
+
+.table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 12px;
+  text-align: left;
+  vertical-align: baseline;
+}
+.table th {
+  font-weight: bold;
+}
+.table thead th {
+  vertical-align: bottom;
+}
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+
+.table-bordered {
+  border-collapse:collapse;
+}
+
+.table-bordered,
+.table-bordered td,
+.table-bordered th {
+  /*border: 1px dotted #000;*/
+  border: 1px solid #000;
+  background: #FFFFFF;
+}
+
+
+/* House */
+table.house-legend {margin: 0 auto 10px auto;}
+table.house-legend td.legend-label {padding: 0 10px 0 4px;}
+table.house-schema {margin: 0 auto;}
+table.house-schema td td.not-subscriber span { border: 1px solid white; }
+table.house-schema td td a,
+table.house-schema td td span { width: 100%; height: 100%; display: block;text-align:right;}
+table.house-schema td td a span.filtered-subscriber { display: inline; }
+
+.not-subscriber { color: #CCC; }
+.good-subscriber a { color: #000; }
+.risk-subscriber a { color: #000; border: 1px dotted #000; }
+.evil-subscriber a { color: #000; border: 2px dashed #000; }
+
+.good-subscriber a,
+.risk-subscriber a,
+.evil-subscriber a {
+  text-decoration: none;
+}
+
+.good-subscriber a:hover,
+.risk-subscriber a:hover,
+.evil-subscriber a:hover{
+  text-decoration: underline;
+}
+
+.filtered-subscriber {
+  color:black;
+  font-weight:bold;
+  font-size: 18px;
+}
+
+.logo {
+  height:52px;
+  padding: 10px 0 0 20px;
+  margin: 0;
+  font-weight: bold;
+  border-bottom: 3px solid black;
+}
+
+.logo img {
+  margin-top: -13px;
+  margin-right: 20px;
+  float:left;
+}
+
+label { font-weight: bold; }
+a { color: black; text-decoration: none;}
+a:hover, a:focus { color: #005580 !important; text-decoration: underline !important; }
+.hidden-printer a, a.hidden-printer  { color: #08c; text-decoration: underline;}
+
+span.phone-with-icon { white-space: nowrap; padding-left: 16px; display:inline-block; -webkit-print-color-adjust:exact; }
+span.phone-with-icon.mts { background: url(/images/phone/mts-print12.png) no-repeat; }
+span.phone-with-icon.velcom { background: url(/images/phone/velcom-print12.png) no-repeat; }
+span.phone-with-icon.life { background: url(/images/phone/life-print12.png) no-repeat; }
+span.phone-with-icon.btk { background: url(/images/phone/btk-print12.png) no-repeat; }
+
+span.wait_short { color: #888; }
+span.wait_normal {}
+span.wait_long { font-weight: bold; }
+
+table.my-columns-2 {width:100%; border-collapse:collapse; }
+table.my-columns-2 tr td.my-column-row:first-child {padding-left:0px;}
+table.my-columns-2 td.my-column-row {padding:0px 0px 0px 20px; width:50%; vertical-align:top;}
+
+div.confidential {margin-top: -20px;text-align:right; padding-right: 30px; display:none;}
+@media print { div.confidential {margin-top: -30px; display:block; } }
+div.confidential span.public_document_id {font-family:monospace;font-size:12px;padding-left:10px;}
+
+thead, tfoot { font-weight: bold; }

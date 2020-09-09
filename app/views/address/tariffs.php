@@ -1,0 +1,1 @@
+<?php echo billing_tariff_select_tag(get_field_name(get_field_value('for'), 'billing_tariff_id'), $billing_tariff_id, $billing_tariffs); ?>

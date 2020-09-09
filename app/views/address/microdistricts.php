@@ -1,0 +1,1 @@
+<?php if (count($microdistricts) > 0) echo select_field('selected_region', 'city_microdistrict_id', 'Микрорайон', get_field_collection($microdistricts, 'id', 'name', '- Все микрорайоны -')); ?>

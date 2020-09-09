@@ -1,0 +1,79 @@
+div.attachments-button { float: right; cursor: pointer; width: 32px; height: 32px; margin-right: 5px; background: url('/images/file-uploader/attachment-black.png') no-repeat; }
+div.attachments-button.attachments-full { background: url('/images/file-uploader/attachment-blue.png') no-repeat; }
+a#attachments_upload_button { display:block; width:100%; padding: 10px 0; margin: 0; background-color: #F8F8F8; color: #333; text-align:center; text-decoration: none; }
+a#attachments_upload_button:hover { background-color: #F5F5F5; color: #111; }
+form#attachments_form { margin: 0; }
+div#attachments_dropzone { padding: 40px 50px; background-color: #f5f5f5; color: #777777; border: dashed 3px #aaa; border-radius: 3px; text-align: center; font-size:16px; font-weight:bold; }
+div#attachments_dropzone a { margin-top: 10px; }
+div#attachments_dropzone input{ display:none; position: absolute; top:-9999px; }
+table#attachments_table { margin:20px 0 0 0; }
+table#attachments_table:empty { display:none; }
+table#attachments_table tr.error { color:red; }
+a.attachments-destroy { background: none repeat scroll 0 0 rgba(0, 0, 0, 0); border: 0 none; cursor: pointer; padding: 0; color: #000000; float: right; font-size: 20px; font-weight: bold; line-height: 20px; opacity: 0.2; text-shadow: 0 1px 0 #FFFFFF; text-decoration: none; }
+a.attachments-destroy:hover { color: #ff0000; opacity: 0.5; }
+
+div.mime { height: 16px; width: 16px; display: inline-block; margin: 0 8px -3px 0; }
+/* Default file icon */
+div.mime { background: url(/images/mime/file.png) no-repeat left top; }
+/* Additional file icons */
+div.mime.ext-jpg { background-image: url(/images/mime/picture.png); }
+div.mime.ext-3gp { background-image: url(/images/mime/film.png); }
+div.mime.ext-afp { background-image: url(/images/mime/code.png); }
+div.mime.ext-afpa { background-image: url(/images/mime/code.png); }
+div.mime.ext-asp { background-image: url(/images/mime/code.png); }
+div.mime.ext-aspx { background-image: url(/images/mime/code.png); }
+div.mime.ext-avi { background-image: url(/images/mime/film.png); }
+div.mime.ext-bat { background-image: url(/images/mime/application.png); }
+div.mime.ext-bmp { background-image: url(/images/mime/picture.png); }
+div.mime.ext-c { background-image: url(/images/mime/code.png); }
+div.mime.ext-cfm { background-image: url(/images/mime/code.png); }
+div.mime.ext-cgi { background-image: url(/images/mime/code.png); }
+div.mime.ext-com { background-image: url(/images/mime/application.png); }
+div.mime.ext-cpp { background-image: url(/images/mime/code.png); }
+div.mime.ext-css { background-image: url(/images/mime/css.png); }
+div.mime.ext-doc { background-image: url(/images/mime/doc.png); }
+div.mime.ext-docx { background-image: url(/images/mime/doc.png); }
+div.mime.ext-exe { background-image: url(/images/mime/application.png); }
+div.mime.ext-gif { background-image: url(/images/mime/picture.png); }
+div.mime.ext-fla { background-image: url(/images/mime/flash.png); }
+div.mime.ext-h { background-image: url(/images/mime/code.png); }
+div.mime.ext-htm { background-image: url(/images/mime/html.png); }
+div.mime.ext-html { background-image: url(/images/mime/html.png); }
+div.mime.ext-jar { background-image: url(/images/mime/java.png); }
+div.mime.ext-jpg { background-image: url(/images/mime/picture.png); }
+div.mime.ext-jpeg { background-image: url(/images/mime/picture.png); }
+div.mime.ext-js { background-image: url(/images/mime/script.png); }
+div.mime.ext-lasso { background-image: url(/images/mime/code.png); }
+div.mime.ext-log { background-image: url(/images/mime/txt.png); }
+div.mime.ext-m4p { background-image: url(/images/mime/music.png); }
+div.mime.ext-mov { background-image: url(/images/mime/film.png); }
+div.mime.ext-mp3 { background-image: url(/images/mime/music.png); }
+div.mime.ext-mp4 { background-image: url(/images/mime/film.png); }
+div.mime.ext-mpg { background-image: url(/images/mime/film.png); }
+div.mime.ext-mpeg { background-image: url(/images/mime/film.png); }
+div.mime.ext-ogg { background-image: url(/images/mime/music.png); }
+div.mime.ext-pcx { background-image: url(/images/mime/picture.png); }
+div.mime.ext-pdf { background-image: url(/images/mime/pdf.png); }
+div.mime.ext-php { background-image: url(/images/mime/php.png); }
+div.mime.ext-png { background-image: url(/images/mime/picture.png); }
+div.mime.ext-ppt { background-image: url(/images/mime/ppt.png); }
+div.mime.ext-psd { background-image: url(/images/mime/psd.png); }
+div.mime.ext-pl { background-image: url(/images/mime/script.png); }
+div.mime.ext-py { background-image: url(/images/mime/script.png); }
+div.mime.ext-rb { background-image: url(/images/mime/ruby.png); }
+div.mime.ext-rbx { background-image: url(/images/mime/ruby.png); }
+div.mime.ext-rhtml { background-image: url(/images/mime/ruby.png); }
+div.mime.ext-rpm { background-image: url(/images/mime/linux.png); }
+div.mime.ext-ruby { background-image: url(/images/mime/ruby.png); }
+div.mime.ext-sql { background-image: url(/images/mime/db.png); }
+div.mime.ext-swf { background-image: url(/images/mime/flash.png); }
+div.mime.ext-tif { background-image: url(/images/mime/picture.png); }
+div.mime.ext-tiff { background-image: url(/images/mime/picture.png); }
+div.mime.ext-txt { background-image: url(/images/mime/txt.png); }
+div.mime.ext-vb { background-image: url(/images/mime/code.png); }
+div.mime.ext-wav { background-image: url(/images/mime/music.png); }
+div.mime.ext-wmv { background-image: url(/images/mime/film.png); }
+div.mime.ext-xls { background-image: url(/images/mime/xls.png); }
+div.mime.ext-xlsx { background-image: url(/images/mime/xls.png); }
+div.mime.ext-xml { background-image: url(/images/mime/code.png); }
+div.mime.ext-zip { background-image: url(/images/mime/zip.png); }

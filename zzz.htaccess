@@ -1,0 +1,12 @@
+Options +FollowSymLinks
+Options -Indexes
+
+DirectoryIndex /zzz/index.html
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI}  ^/zzz.gif$
+RewriteRule . /zzz/zzz.gif [L,QSA]
+
+RewriteCond %{REQUEST_URI}  !^/zzz/.*$
+RewriteRule . /zzz/index.html [L,QSA]

@@ -1,0 +1,24 @@
+php_value upload_max_filesize 100M
+php_value post_max_size 100M
+
+Options +FollowSymLinks
+Options -Indexes
+
+DirectoryIndex /lib/engine/application.php?uri=
+
+RewriteEngine on
+
+# SEND FILE
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+RewriteCond %{THE_REQUEST} ^GET [NC]
+RewriteRule $ /public%{REQUEST_URI} [L]
+
+RewriteCond %{SCRIPT_FILENAME} -f
+RewriteCond %{REQUEST_URI}  !^/public/.*$
+RewriteCond %{REQUEST_URI}  !^/lib/engine/application.php$
+RewriteRule $ /public%{REQUEST_URI} [L]
+
+# EXECUTE PHP
+RewriteCond %{REQUEST_URI}  !^/public/.*$
+RewriteCond %{REQUEST_URI}  !^/lib/engine/application.php.*$
+RewriteRule . /lib/engine/application.php?uri=%{REQUEST_URI} [L,QSA]

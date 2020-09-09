@@ -1,0 +1,2 @@
+<?php if (count($districts) > 0) echo select_field('selected_region', 'city_district_id', 'Район', get_field_collection($districts, 'id', 'name', '- Все районы -')); ?>
+<div class='choose_city_microdistrict_div'></div>

@@ -1,0 +1,119 @@
+/* Useful classes */
+
+.align-left { text-align:left !important; }
+.align-center { text-align:center !important; }
+.align-right { text-align:right !important; }
+.align-justify { text-align:justify !important; }
+.align-top { vertical-align:top !important; }
+.align-middle { vertical-align:middle !important; }
+.align-bottom { vertical-align:bottom !important; }
+.nobr {white-space: nowrap;}
+
+.priority-1 { font-weight: bold; }
+.priority-3 { font-weight: bold; }
+.priority-5 {}
+.priority-9 { color: gray; }
+
+img.phone-icon {
+  margin-bottom:-3px;
+}
+
+/* Bootstrap */
+
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:14px;
+  line-height: 20px;
+}
+
+h3 { font-size: 14px; font-weight: bold; }
+h3 small { font-size: 14px; font-weight: normal; }
+
+.table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: baseline;
+}
+.table th {
+  font-weight: bold;
+}
+.table thead th {
+  vertical-align: bottom;
+}
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+
+.table-bordered {
+  border-collapse:collapse;
+}
+
+.table-bordered,
+.table-bordered td,
+.table-bordered th {
+  /*border: 1px dotted #000;*/
+  border: 1px solid #000;
+  background: #FFFFFF;
+}
+
+
+/* House */
+table.house-legend {margin: 0 auto 10px auto;}
+table.house-legend td.legend-label {padding: 0 10px 0 4px;}
+table.house-schema {margin: 0 auto;}
+
+.not-subscriber {
+  color: #CCC;
+}
+
+.good-subscriber a {
+  color: #000;
+}
+
+.risk-subscriber a {
+  color: #000;
+  border: 1px dotted #000;
+}
+
+.evil-subscriber a {
+  color: #000;
+  border: 2px dashed #000;
+}
+
+.good-subscriber a,
+.risk-subscriber a,
+.evil-subscriber a {
+  text-decoration: none;
+}
+
+.good-subscriber a:hover,
+.risk-subscriber a:hover,
+.evil-subscriber a:hover{
+  text-decoration: underline;
+}
+
+.filtered-subscriber {
+  font-weight:bold;
+  font-size: 18px;
+}
+
+.logo {
+  height:52px;
+  padding: 10px 0 0 20px;
+  margin: 0;
+  font-weight: bold;
+  border-bottom: 3px solid black;
+}
+
+.logo img {
+  margin-top: -13px;
+  margin-right: 20px;
+  float:left;
+}

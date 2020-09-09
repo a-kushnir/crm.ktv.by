@@ -1,0 +1,1 @@
+<?php include '../views/profile/index.php'; ?>

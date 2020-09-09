@@ -1,0 +1,1 @@
+<?php echo select_tag(get_field_name(get_field_value('for'), 'house_id'), null, get_field_collection($houses, 'id', 'name', ''), array('class' => 'address_house span1')) ?>
