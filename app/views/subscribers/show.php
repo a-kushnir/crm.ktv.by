@@ -26,8 +26,8 @@
   <?php if (!$mobile_version && $layout != 'print' && $subscriber->self_billing()) {
     if (has_access('subscriber/download_memo')) echo "<a class='btn pull-right' style='margin-left:10px;' href='/subscribers/".$id."/memo.rtf'><i class='icon-download-alt'></i> Памятка</a>";
     if (has_access('subscriber/download_cancel')) echo "<a class='btn pull-right' style='margin-left:10px;' href='/subscribers/".$id."/cancel.rtf'><i class='icon-download-alt'></i> Отключение</a>";
-	if (has_access('subscriber/download_cancel')) echo "<a class='btn pull-right' style='margin-left:10px;' href='/subscribers/".$id."/envelope.rtf'><i class='icon-download-alt'></i> Конверт</a>";
-	if (has_access('subscriber/download_cancel')) echo "<a class='btn pull-right' style='margin-left:10px;' href='/subscribers/".$id."/complaint.rtf'><i class='icon-download-alt'></i> Претензия</a>";
+    if (has_access('subscriber/download_cancel')) echo "<a class='btn pull-right' style='margin-left:10px;' href='/subscribers/".$id."/envelope.rtf'><i class='icon-download-alt'></i> Конверт</a>";
+    if (has_access('subscriber/download_cancel')) echo "<a class='btn pull-right' style='margin-left:10px;' href='/subscribers/".$id."/complaint.rtf'><i class='icon-download-alt'></i> Претензия</a>";
   } ?>
   <?php 
     $form = new FormBuilder('subscriber', true);

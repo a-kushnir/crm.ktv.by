@@ -44,14 +44,14 @@ if ($layout != 'print') {
   </thead>
 <?php 
 foreach($amp_channels as $amp_channel) {
-	echo '<tr'.($amp_channel['enabled'] ? ' class="handled-request"' : '').'>'.
+  echo '<tr'.($amp_channel['enabled'] ? ' class="handled-request"' : '').'>'.
   '<td class="align-right">'.$amp_channel['channel_name'].'</td>'.
   '<td class="align-right">'.format_float($amp_channel['frequency'], 2).'</td>'.
   '<td>'.$amp_channel['name'].'</td>'.
   '<td class="align-right">'.$amp_channel['input'].'</td>'.
   '<td class="align-right">'.$amp_channel['output'].'</td>'.
   '<td class="align-right">'.$amp_channel['tap'].'</td>'.
-	'</tr>';
+  '</tr>';
 }
 ?>
 </tbody>

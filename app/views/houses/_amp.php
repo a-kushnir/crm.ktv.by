@@ -19,14 +19,14 @@
   </thead>
 <?php 
 foreach($amp_channels as $amp_channel) {
-	echo '<tr'.($amp_channel['enabled'] ? ' class="handled-request"' : '').'>'.
+  echo '<tr'.($amp_channel['enabled'] ? ' class="handled-request"' : '').'>'.
   '<td class="align-right">'.$amp_channel['channel_name'].'</td>'.
   '<td class="align-right">'.format_float($amp_channel['frequency'], 2).'</td>'.
   '<td>'.$amp_channel['name'].'</td>'.
   '<td class="align-center"><input name="input['.$amp_channel['channel_id'].']" class="input-small" value="'.htmlspecialchars($amp_channel['input']).'"></input></td>'.
   '<td class="align-center"><input name="output['.$amp_channel['channel_id'].']" class="input-small" value="'.htmlspecialchars($amp_channel['output']).'"></input></td>'.
   '<td class="align-center"><input name="tap['.$amp_channel['channel_id'].']" class="input-small" value="'.htmlspecialchars($amp_channel['tap']).'"></input></td>'.
-	'</tr>';
+  '</tr>';
 }
 ?>
 </tbody>

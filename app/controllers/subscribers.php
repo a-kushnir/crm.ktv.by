@@ -274,7 +274,7 @@ class SubscribersController extends ApplicationController
   function download_template_file($template_path, $file_name)
   {
     $template_path = $_SERVER['DOCUMENT_ROOT'].'/lib/files/'.$template_path;
-	  
+    
     $subscriber = Subscriber::load($this->id);
     if (!$subscriber) show_404();
     $billing_account = BillingAccount::load($subscriber['billing_account_id']);
@@ -301,7 +301,7 @@ class SubscribersController extends ApplicationController
     foreach($replaces as $key => $value)
       $rtf_file = str_replace($key, $value, $rtf_file);
 
-	$file_name = str_replace('<lookup_code>', $subscriber['lookup_code'], $file_name);
+    $file_name = str_replace('<lookup_code>', $subscriber['lookup_code'], $file_name);
     download_file_by_content($rtf_file, $file_name, true);
   }
 
@@ -309,7 +309,7 @@ class SubscribersController extends ApplicationController
   {
     check_access('subscriber/download_cancel');
 
-	$subscriber = Subscriber::load($this->id);
+    $subscriber = Subscriber::load($this->id);
     if (!$subscriber) show_404();
     $billing_account = BillingAccount::load($subscriber['billing_account_id']);
     $billing_tariff = $subscriber->billing_tariff();
@@ -317,31 +317,31 @@ class SubscribersController extends ApplicationController
     $actual_balance = $subscriber['actual_balance'] + (date('d') == '01' ? $billing_tariff['subscription_fee'] : 0);
     $subscription_fee = $billing_tariff['subscription_fee'];
     $sum = -($actual_balance - $subscription_fee);
-	
-	$template_path = $sum > 0 ? 'cancel_with_debt.rtf' : 'cancel_without_debt.rtf';
-	$file_name = 'Заявление на отключение <lookup_code>.rtf';
+  
+    $template_path = $sum > 0 ? 'cancel_with_debt.rtf' : 'cancel_without_debt.rtf';
+    $file_name = 'Заявление на отключение <lookup_code>.rtf';
 
-	$this->download_template_file($template_path, $file_name);
+    $this->download_template_file($template_path, $file_name);
   }
   
   function download_complaint()
   {
     check_access('subscriber/download_cancel');
 
-	$template_path = 'complaint.rtf';
-	$file_name = 'Претензия <lookup_code>.rtf';
+    $template_path = 'complaint.rtf';
+    $file_name = 'Претензия <lookup_code>.rtf';
 
-	$this->download_template_file($template_path, $file_name);
+    $this->download_template_file($template_path, $file_name);
   }
   
   function download_envelope()
   {
-	check_access('subscriber/download_cancel');
+    check_access('subscriber/download_cancel');
 
-	$template_path = 'envelope.rtf';
-	$file_name = 'Конверт <lookup_code>.rtf';
+    $template_path = 'envelope.rtf';
+    $file_name = 'Конверт <lookup_code>.rtf';
 
-	$this->download_template_file($template_path, $file_name);
+    $this->download_template_file($template_path, $file_name);
   }
   
   function new_request()

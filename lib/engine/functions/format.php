@@ -16,24 +16,24 @@ function format_float($value, $decimals = 0, $options = null) {
 }
 
 function prepare_float($value) {
-	$dotPos = strrpos($value, '.');
-    $commaPos = strrpos($value, ',');
-    $sep = (($dotPos > $commaPos) && $dotPos) ? $dotPos : 
-        ((($commaPos > $dotPos) && $commaPos) ? $commaPos : false);
-   
-    if (!$sep) {
-        return floatval(preg_replace("/[^0-9-]/", "", $value));
-    } 
+  $dotPos = strrpos($value, '.');
+  $commaPos = strrpos($value, ',');
+  $sep = (($dotPos > $commaPos) && $dotPos) ? $dotPos : 
+    ((($commaPos > $dotPos) && $commaPos) ? $commaPos : false);
+  
+  if (!$sep) {
+    return floatval(preg_replace("/[^0-9-]/", "", $value));
+  } 
 
-	return preg_replace("/[^0-9-]/", "", substr($value, 0, $sep)) . '.' . preg_replace("/[^0-9]/", "", substr($value, $sep+1, strlen($value)));
+  return preg_replace("/[^0-9-]/", "", substr($value, 0, $sep)) . '.' . preg_replace("/[^0-9]/", "", substr($value, $sep+1, strlen($value)));
 }
 
 function isfloat($value) {
-	return is_numeric(prepare_float($value));
+  return is_numeric(prepare_float($value));
 }
 
 function tofloat($value) {
-    return floatval(prepare_float($value));
+  return floatval(prepare_float($value));
 }
 
 function format_percent($value, $decimals = 2) {

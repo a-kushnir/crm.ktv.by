@@ -10,11 +10,11 @@
   </thead>
 <?php 
 foreach($messages as $message) {
-	echo '<tr>'.
+  echo '<tr>'.
   '<td nowrap>'.phone_with_icon($message['phone_number']).'</td>'.
   '<td>'.$message['message'].'</td>'.
   '<td class="align-right">'.human_datetime($message['sent_at']).'</td>'.
-	'</tr>';
+  '</tr>';
 }
 ?>
 </tbody>

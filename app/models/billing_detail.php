@@ -92,7 +92,7 @@ class BillingDetail extends ModelBase {
     
     $this['id'] = $id;
     $this['actual_date'] = prepare_date($this['actual_date']);
-	$this['value'] = prepare_float($this['value']);
+    $this['value'] = prepare_float($this['value']);
   }
 
                                                                 // sum or count // all, manual or auto // sum, plus or minus
